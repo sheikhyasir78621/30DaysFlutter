@@ -11,6 +11,7 @@ import 'package:flutter_catalog/widgets/item_widget.dart';
 import 'package:flutter_catalog/widgets/themes.dart';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:velocity_x/velocity_x.dart';
+// ignore: unused_import
 import 'package:cupertino_icons/cupertino_icons.dart';
 
 class HomePage extends StatefulWidget {
@@ -40,11 +41,14 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Mytheme.creamColor,
+      backgroundColor: context.canvasColor,
       floatingActionButton: FloatingActionButton(
           onPressed: () => Navigator.pushNamed(context, MyRoutes.cartRoute),
-          backgroundColor: Mytheme.darkBluishColor,
-          child: Icon(CupertinoIcons.cart)),
+          backgroundColor: context.theme.buttonColor,
+          child: Icon(
+            CupertinoIcons.cart,
+            color: Colors.white,
+          )),
       body: SafeArea(
         child: Container(
           padding: Vx.m32,
