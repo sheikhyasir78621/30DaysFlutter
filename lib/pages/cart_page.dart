@@ -34,7 +34,7 @@ class _CartTotal extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           VxConsumer(
-              builder: (context, _) {
+              builder: (ctx, _) {
                 return "\$${_cart.totalPrice}"
                     .text
                     .xl5
