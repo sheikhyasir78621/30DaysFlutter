@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_catalog/core/store.dart';
@@ -54,7 +56,7 @@ class _HomePageState extends State<HomePage> {
                   color: Colors.white,
                 ))
             .badge(
-                color: Vx.red500,
+                color: Vx.gray500,
                 size: 22,
                 count: _cart.items.length,
                 textStyle: TextStyle(

@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 import 'package:flutter_catalog/utils/routes.dart';
 // ignore: import_of_legacy_library_into_null_safe
@@ -65,8 +67,9 @@ class _LoginPageState extends State<LoginPage> {
                   children: [
                     TextFormField(
                       decoration: InputDecoration(
-                          hintText: "Enter your username",
-                          labelText: "Username"),
+                        hintText: "Enter your username",
+                        labelText: "Username",
+                      ),
                       validator: (value) {
                         if (value!.isEmpty) {
                           return "Username cannot be empty";
